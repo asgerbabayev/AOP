@@ -1,5 +1,4 @@
-﻿using Business.Handlers.Logs.Queries;
-using Core.Entities.Concrete;
+﻿using Core.Entities.Concrete;
 using Entities.Dtos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -27,7 +26,8 @@ namespace WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetList()
         {
-            return GetResponseOnlyResultData(await Mediator.Send(new GetLogDtoQuery()));
+            return Ok();
+            //return GetResponseOnlyResultData(await Mediator.Send(new GetLogDtoQuery()));
         }
     }
 }
